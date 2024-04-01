@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "NeueKaine-Bold";
+  src: url("../Assets/Fonts/NeueKaine-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CamptonBook";
+  src: url("../Assets/Fonts/CamptonBook.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "CamptonLight";
+  src: url("../Assets/Fonts/CamptonLight.ttf") format("truetype");
+}
+
+.title-hero-section {
+  font-family: "NeueKaine-Bold";
+  font-size: 140px;
+  padding: 2rem;
+}
+
+.paragraph-hero {
+  font-family: "CamptonBook";
+  font-size: 24px;
+  padding: 3rem;
+  background-color: black;
+  color: #ffffff;
+}
+
+.cont-vacio {
+  background-color: black;
+}
+
+.marquee-container p {
+  font-size: 5rem;
+  font-family: "CamptonLight";
+}
+.marquee-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #ff6bde;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 5s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(15%);
+  }
+}

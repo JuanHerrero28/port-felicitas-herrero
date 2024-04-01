@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "NeueKaineLight";
+    src: url("../Assets/Fonts/NeueKaine-Light.ttf") format("truetype");
+  }
+
+.link-nav .MuiTypography-subtitle1 {
+  font-family: "NeueKaineLight";
+}
+
+.link-nav {
+  text-decoration: none;
+}
+
+.light-background .link-nav {
+  color: #000000; /* Color de texto para fondo claro */
+}
+
+.dark-background .link-nav {
+  color: #ffffff; /* Color de texto para fondo oscuro */
+}
+
+.light-background {
+  background-color: #ffffff; /* Color de texto para fondo claro */
+}
+
+.dark-background {
+  background-color:#000000;
+}
+
+.dark-background .link-nav {
+  transition: color 0.3s ease; /* Transición suave de 0.3 segundos para el color del texto */
+}
+
+.dark-background .link-nav:hover {
+  color: #FF6BDE; /* Cambiar el color del texto a gris cuando el cursor pase por encima */
+}
+
+.light-background .link-nav {
+  transition: color 0.3s ease; /* Transición suave de 0.3 segundos para el color del texto */
+}
+
+.light-background .link-nav:hover {
+  color: #004FFF;
+
+}
+
