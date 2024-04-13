@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "NeueKaineBold";
+  src: url("../Assets/Fonts/NeueKaine-Bold.ttf") format("truetype");
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+}
+
+.title {
+  font-family: "NeueKaineBold";
+  font-size: 96px;
+  margin: 16px 0;
+  padding: 2rem;
+  color: #ffffff;
+}
+
+.cardContainer {
+  width: 100%;
+  background-color: #ff6bde;
+  padding: 6rem 1rem 6rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 400px;
+  height: 600px;
+  background-color: #050000;
+  margin: 0 12px;
+  border-radius: 2rem;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImageContainer {
+  display: flex;
+  padding: 2rem 2rem 6rem 2rem;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card h6 {
+  color: #ffffff;
+  padding: 3rem 0.5rem 0.5rem 2rem;
+  font-size: 36px;
+  font-family: "NeueKaineBold";
+}
+
+.card h5 {
+  color: #ffffff;
+  padding: 2rem 0.5rem 2rem 2rem;
+  font-size: 27px;
+  width: 60%;
+  font-family: "NeueKaineBold";
+}
+
+.card p {
+  color: #ffffff;
+  padding: 1rem 1.5rem 2rem 2rem;
+  font-size: 18px;
+  font-family: "NeueKaineBold";
+}
+
+@media only screen and (max-width: 600px) {
+  .cardContainer {
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 40px;
+  }
+}

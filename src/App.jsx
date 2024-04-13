@@ -1,11 +1,15 @@
 import { BrowserRouter, Routes, Route} from "react-router-dom";
-/* import Footer from "./Components/Footer"; */
+import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
-/* import Detail from "./Routes/Detail"; */
+
 /* import Contact from "./Routes/Contact"; */
 import Home from "./Routes/Home";
 /* import Favs from "./Routes/Favs"; */
 import { ContextProvider } from "./Utils/global.context";
+import DetailProyect from "./Routes/DetailProyect";
+/* import Cursor from "./Common/Cursor"; */
+
+
 
 function App() {
   return (
@@ -16,13 +20,14 @@ function App() {
             element={
               <div>
                 <NavBar/>
-                {/* <Footer /> */}
+                <Footer />
+                {/* <Cursor/> */}
               </div>
             }
           >
             <Route path="/" element={<Home />} />
             {/* <Route path="/contacto" element={<Contact />} /> */}
-            {/* <Route path="/detalle/:id" element={<Detail />} /> */}
+            <Route path="/detalle/:id" element={<DetailProyect/>} />
             {/* <Route path="/favs" element={<Favs />} /> */}
           </Route>
         </Routes>

@@ -1,0 +1,27 @@
+/* .cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: #0051ff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.2s ease;
+  }
+  
+  .cursor.hovered {
+    width: 80px;
+    height: 80px;
+    background-color: #0051ff;
+  }
+  
+  .view-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-family: "NeueKaineLight";
+    color: white;
+  } */
+  

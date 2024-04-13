@@ -1,53 +1,73 @@
 @font-face {
-    font-family: "NeueKaineLight";
-    src: url("../Assets/Fonts/NeueKaine-Light.ttf") format("truetype");
+  font-family: "NeueKaineLight";
+  src: url("../Assets/Fonts/NeueKaine-Light.ttf") format("truetype");
+}
+
+.work-samples {
+  padding: 15px;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 6rem;
+}
+
+.project-container {
+  position: relative;
+  width: calc(50% - 15px);
+  margin-right: 15px;
+  margin-bottom: 15px;
+  overflow: hidden; /* Para evitar que el texto del proyecto se desborde */
+}
+
+.project-container img {
+  filter: grayscale(100%);
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease; /* Transición suave */
+}
+
+.project-container:hover img {
+  transform: scale(1.2);
+  filter: none;
+}
+
+.project-box {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 18px;
+  width: 50%;
+  font-family: "NeueKaineLight";
+  background-color: #0051ff;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  font-size: 24px;
+  text-align: center;
+  visibility: hidden;
+  text-decoration: none;
+  opacity: 0; /* Inicialmente transparente */
+  transition: visibility 0s, opacity 0.3s linear; /* Transición suave */
+}
+
+.project-container:hover .project-box {
+  visibility: visible; /* Mostrar al pasar el cursor */
+  opacity: 1; /* Hacer visible */
+}
+
+@media only screen and (max-width: 600px) {
+  .grid-container{
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    gap: 20px;
   }
 
-  .image-container {
-    position: relative;
-  }
-  
-  .image-container::before {
-    content: '';
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
+ 
+  .project-container {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, #080808a8 0%, #000000 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
   }
-  
-  .image-container:hover::before {
-    opacity: 1;
-  }
-  
-  .project-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    cursor: pointer;
-    font-size: 24px;
-    font-family: "NeueKaineLight";
-    text-align: center;
-    transform: translate(-50%);
-    padding: 25px 20px;
-    width: 50%;
-    z-index: 1; /* Ensure the box appears above the image */
-    transition: opacity 0.4s ease;
-    opacity: 0; /* Start with opacity 0 */
-  }
-  
-  .image-container:hover .project-box {
-    opacity: 2;
-    background-color: #0051ff;
-    color: #ffffff; /* Show the box on hover */
-  }
-  
-  
-  
-  
-  
-  
+}

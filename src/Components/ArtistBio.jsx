@@ -1,23 +1,25 @@
-
-
-import { Grid, Typography, Button } from '@mui/material';
+import { Grid, Button } from "@mui/material";
+import "./ArtistBio.css"; // Importa el archivo de estilos CSS
 
 const ArtistBio = () => {
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={12}>
-        <Typography variant="body1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus quam eget nunc blandit, a feugiat
-          ipsum ultricies. Phasellus eu ex justo. Integer hendrerit aliquet justo nec efficitur.
-        </Typography>
+    <Grid container>
+      <Grid item xs={12} md={12}>
+        <div className="bioText">
+          <p className="parrafo-artist-bio">
+            Con más de tres años de experiencia como diseñadora gráfica independiente, quiero expandir mis conocimientos hacia el mundo del diseño web.
+          </p>
+        </div>
       </Grid>
       <Grid item xs={12}>
-        <Button variant="contained" color="primary">
-          Leer más
-        </Button>
+        <div className="cont-art-bio">
+          <Button variant="contained" className="bioButton">
+            Leer más
+          </Button>
+        </div>
       </Grid>
     </Grid>
   );
-}
+};
 
 export default ArtistBio;
