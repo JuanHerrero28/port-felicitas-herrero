@@ -1,4 +1,5 @@
 
+import BtnTop from "../Common/BtnTop";
 import ArtistBio from "../Components/ArtistBio";
 import HeroSection from "../Components/HeroSection"
 import Process from "../Components/Process";
@@ -13,6 +14,7 @@ const Home = () => {
         <ArtistBio/>
         <Process/>
         <Testimonials/>
+        <BtnTop/>
       </div>
     );
   };
