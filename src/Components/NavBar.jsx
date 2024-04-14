@@ -58,7 +58,7 @@ const NavBar = () => {
           direction="row"
           justifyContent="space-between"
           alignItems="center"
-          padding={"3.5rem"}
+          padding={"2rem"}
           className={state.theme ? "light-background" : "dark-background"}
         >
           <Grid item>
@@ -66,7 +66,7 @@ const NavBar = () => {
               <Typography
                 variant="subtitle1"
                 sx={{
-                  fontSize: isMobile ? "15px" : "24px",
+                  fontSize: isMobile ? "12px" : "24px",
                 }}
               >
                 Felicitas Herrero
@@ -80,7 +80,7 @@ const NavBar = () => {
                   <Typography
                     variant="subtitle1"
                     sx={{
-                      fontSize: isMobile ? "15px" : "24px",
+                      fontSize: isMobile ? "12px" : "24px",
                       marginRight: "1.2rem",
                     }}
                   >
@@ -93,7 +93,7 @@ const NavBar = () => {
                   <Typography
                     variant="subtitle1"
                     sx={{
-                      fontSize: isMobile ? "15px" : "24px",
+                      fontSize: isMobile ? "12px" : "24px",
                       marginRight: "0.8rem",
                     }}
                   >
