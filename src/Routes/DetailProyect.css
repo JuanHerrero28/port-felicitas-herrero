@@ -76,6 +76,7 @@
   font-size: 30px;
   padding: 18px;
   width: 75%;
+  text-transform: uppercase;
 }
 
 .grid-item.paragraph2 {
@@ -100,6 +101,7 @@
   font-family: "NeueKaineBold";
   font-size: 30px;
   padding: 18px;
+  text-transform: uppercase;
 }
 
 .grid-item.paragraph3 {
@@ -127,6 +129,7 @@
   font-family: "NeueKaineBold";
   font-size: 30px;
   padding: 18px;
+  text-transform: uppercase;
 }
 
 .grid-item.paragraph4 {
@@ -153,6 +156,7 @@
   font-family: "NeueKaineBold";
   font-size: 30px;
   padding: 18px;
+  text-transform: uppercase;
 }
 
 .grid-item.image7 {
@@ -170,21 +174,21 @@
 }
 
 .toggle-button {
-  background-color: black;
-  color: #fff;
+  background-color: #FF6BDE;
+  color: black;
   border: none;
   border-radius: 5px;
   font-family: "NeueKaineBold";
-  font-size: 24px;
+  font-size: 70px;
   cursor: pointer;
   padding: 18px;
   margin-top: 4rem;
   margin-bottom: 4rem;
-  width: 25%;
 }
 
 .content-btn {
-  background-color: black;
+  margin-top: 7rem;
+  background-color: #FF6BDE;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -194,37 +198,44 @@
 
 .pagination-container {
     background-color: black;
-    padding: 20px;
-}
-
-.pagination-container .MuiPagination-ul {
-    list-style: none;
-    padding: 20px;
+    padding: 5rem;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-
-  }
-  
-  .pagination-container .MuiPaginationItem-root {
-    color: #ffffff;
-    font-size: 15px;
-    font-family: "NeueKaineBold";
-  }
-  
-  .pagination-container .MuiPaginationItem-root:hover {
-    cursor: pointer;
-    background-color: #0051ff;
-  }
-
-
-.additional-content {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #f0f0f0;
+    gap: 4rem;
 }
+
+.icon-large {
+  font-size: 6rem;
+  color: white;
+}
+
+/* Estilo base del icono */
+.icon-large {
+  font-size: 6rem;
+  transition: transform 0.2s ease, color 0.2s ease; /* Transiciones suaves para transformación y color */
+}
+
+/* Estilo del icono cuando se hace clic */
+.icon-large:active {
+  transform: scale(1.1); /* Escala ligeramente el icono al hacer clic */
+  color: #FF6BDE; /* Cambia el color del icono al hacer clic */
+}
+
+.project-detail{
+  background-color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

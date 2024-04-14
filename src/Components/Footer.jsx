@@ -5,11 +5,11 @@ const Footer = () => {
     <div className="footer-container">
       <div className="paragraphs-1">
         <p className="parrafo-1">
-          Ahora es el momento de empezar a crear algo increíble juntos
+        Me encantaría que trabajemos juntos!
         </p>
       </div>
       <div className="paragraphs">
-        <p className="parrafo-2">[PONERSE EN CONTACTO]</p>
+        <p className="parrafo-2">[CONTACTO]</p>
       </div>
       <ul className="footer-list">
         <li>
