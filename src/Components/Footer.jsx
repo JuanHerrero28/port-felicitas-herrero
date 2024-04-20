@@ -1,4 +1,6 @@
-import "./Footer.css"; // Archivo CSS donde añadirás tus estilos
+import "./Footer.css";
+import NameComponent from "../Common/NameComponent";
+// Archivo CSS donde añadirás tus estilos
 
 const Footer = () => {
   return (
@@ -12,14 +14,14 @@ const Footer = () => {
         <p className="parrafo-2">[CONTACTO]</p>
       </div>
       <ul className="footer-list">
-        <li>
-          <a href="#linkedin">Linkedin</a>
+      <li>
+          <a href="https://www.linkedin.com/in/felicitas-herrero-b7606119a/" target="_blank"><NameComponent name="linkedin"/></a>
         </li>
         <li>
-          <a href="#mail">Mail</a>
+          <a href="mailto:feliherrero.desing@gmail.com" target="_blank"><NameComponent name="mail"/></a>
         </li>
         <li>
-          <a href="#behance">Behance</a>
+          <a href="https://www.behance.net/herrerofel4c03" target="_blank"><NameComponent name="behance" /></a>
         </li>
       </ul>
     </div>
