@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import "./DetailProyect.css";
 import { useState, useEffect } from "react";
 import Loading from "../Common/Loading";
+import BtnTop from "../Common/BtnTop";
 
 const projectData = [
   {
@@ -40,6 +41,7 @@ const projectData = [
       "Fecha de inicio: 29/02/2024",
       "Fecha de entrega: 10/03/2024",
     ],
+    finalProjectUrl: "https://www.behance.net/gallery/196187545/Presskit-Adrian-Devs"
   },
   {
     id: 2,
@@ -72,6 +74,7 @@ const projectData = [
       "Una vez finalizado el diseño, pasamos a la fase de implementación, donde integramos la nueva identidad visual en diversos contextos y medios. Trabajamos en estrecha colaboración con el Municipio de Mercedes para garantizar una implementación efectiva y coherente del programa de identidad. Además, establecimos mecanismos de evaluación para medir el impacto y la efectividad de la nueva identidad, recopilando retroalimentación de la comunidad para realizar ajustes según fuera necesario.",
     ],
     numberedList: ["Municipio del Partido de Mercedes, provincia de Buenos Aires. Cátedra Rico, Diseño Gráfico, FADU-UBA", "Diseño de identidad ", "Fecha de inicio: 11/04/2023", "Fecha de entrega: 11/07/2023"],
+    finalProjectUrl: "https://www.behance.net/gallery/178785053/Marca-ciudad-Mercedes-provincia-de-Buenos-Aires"
   },
   {
     id: 3,
@@ -104,6 +107,7 @@ const projectData = [
       "Párrafo 7",
     ],
     numberedList: ["Item 1", "Item 2", "Item 3", "Item 4"],
+    finalProjectUrl: "URL_DEL_PROYECTO_EN_BEHANCE_1"
   },
   {
     id: 4,
@@ -136,6 +140,7 @@ const projectData = [
       "Párrafo 7",
     ],
     numberedList: ["Item 1", "Item 2", "Item 3", "Item 4"],
+    finalProjectUrl: "https://www.behance.net/gallery/167170163/PressKit-Dj-Kalima"
   },
 ];
 
@@ -219,7 +224,7 @@ const DetailProyect = () => {
             </div>
           </div>
           <div className="content-btn">
-            <button className="toggle-button">VER PROYECTO FINAL</button>
+          <a href={project.finalProjectUrl} className="toggle-button" target="_blank" rel="noopener noreferrer">VER PROYECTO FINAL</a>
           </div>
           <div className="pagination-container">
             {project.id !== 1 && (
@@ -245,6 +250,7 @@ const DetailProyect = () => {
           </div>
         </>
       )}
+      <BtnTop/>
     </div>
   );
 };

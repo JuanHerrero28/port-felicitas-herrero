@@ -175,6 +175,7 @@
 
 .toggle-button {
   background-color: #FF6BDE;
+  text-decoration: none;
   color: black;
   border: none;
   border-radius: 5px;
@@ -224,6 +225,244 @@
 .project-detail{
   background-color: black;
 }
+
+/* Dentro de tu bloque @media para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+
+  
+  .grid-item {
+    padding: 20px;
+    /* border: 1px solid #39bb4a; */
+  }
+  
+  .grid-item.image1 {
+    grid-column: 1 / span 12;
+  }
+  
+  .grid-item.image1 img {
+    width: 100%;
+  }
+  
+  .grid-item.title1 {
+    font-family: "NeueKaineBold";
+    font-size: 20px;
+    grid-column: 1 / span 6;
+    color: #ffffff;
+  }
+  
+  .grid-item.paragraph1 {
+    font-family: "CamptonBook";
+    font-size: 10px;
+    grid-column: 1 / span 6;
+    color: #ffffff;
+  }
+  
+  .grid-item.title2 {
+    font-family: "NeueKaineBold";
+    font-size: 20px;
+    grid-column: 7 / span 6;
+    color: #ffffff;
+  }
+  
+  .grid-item.list {
+    font-family: "CamptonBook";
+    font-size: 10px;
+    grid-column: 7 / span 6;
+    color: #ffffff;
+    margin-left: 10px;
+  }
+  
+  .grid-item.image2 {
+    grid-column: 1 / span 12;
+  }
+  
+  .grid-item.image2 img {
+    width: 100%;
+  }
+  
+  .grid-item.title3 {
+    font-family: "NeueKaineBold";
+    font-size: 40px;
+    grid-column: 1 / span 12;
+    color: #ffffff;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .grid-item.title4 {
+    grid-column: 1 / span 12;
+  }
+  
+  .title-4{
+    text-align: left;
+    color: #ffffff;
+    font-family: "NeueKaineBold";
+    font-size: 20px;
+    padding: 18px;
+    width: 100%;
+    text-transform: uppercase;
+  }
+  
+  .grid-item.paragraph2 {
+    font-family: "CamptonBook";
+    font-size: 15px;
+    color: #ffffff;
+  }
+  
+  .grid-item.image3 {
+    grid-row: span 2;
+    grid-column: 1 / span 12;
+  }
+
+  .grid-item.image3 img {
+    width: 100%;
+  }
+  
+  .grid-item.title5 {
+    grid-column: 1 / span 12;
+    margin-top: 8rem;
+  }
+  
+  .title-5{
+    text-align: left;
+    color: #ffffff;
+    font-family: "NeueKaineBold";
+    font-size: 20px;
+    padding: 18px;
+    text-transform: uppercase;
+  }
+  
+  .grid-item.paragraph3 {
+    font-family: "CamptonBook";
+    font-size: 15px;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .grid-item.image4 {
+    grid-row: span 2;
+    grid-column: 1 / span 12;
+    margin-top: 8rem;
+  }
+
+  .grid-item.image4 img {
+    width: 100%;
+  }
+  
+  .grid-item.title6 {
+    grid-column: 1 / span 12;
+    margin-top: 8rem;
+  }
+  
+  .title-6{
+    text-align: left;
+    color: #ffffff;
+    font-family: "NeueKaineBold";
+    font-size: 20px;
+    padding: 18px;
+    text-transform: uppercase;
+  }
+  
+  .grid-item.paragraph4 {
+    font-family: "CamptonBook";
+    font-size: 15px;
+    grid-column: 1 / span 5;
+    color: #ffffff;
+  }
+  
+  .grid-item.image5 {
+    grid-row: span 2;
+    grid-column: 1 / span 12;
+    margin-top: 8rem;
+  }
+
+  .grid-item.image5 img {
+    width: 100%;
+  }
+  
+  .grid-item.title7 {
+    grid-column: 1 / span 12;
+    margin-top: 8rem;
+  }
+  
+  .title-7{
+    text-align: left;
+    color: #ffffff;
+    font-family: "NeueKaineBold";
+    font-size: 20px;
+    padding: 18px;
+    text-transform: uppercase;
+  }
+  
+  .grid-item.image7 {
+    grid-row: span 2;
+    grid-column: 1 / span 12;
+    margin-top: 8rem;
+  }
+
+  .grid-item.image7 img {
+    width: 100%;
+  }
+  
+  .grid-item.paragraph7 {
+    font-family: "CamptonBook";
+    font-size: 15px;
+    text-align: left;
+    color: #ffffff;
+  
+  }
+  
+  .toggle-button {
+    background-color: #FF6BDE;
+    text-decoration: none;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-family: "NeueKaineBold";
+    font-size: 25px;
+    cursor: pointer;
+    padding: 18px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  .content-btn {
+    background-color: #FF6BDE;
+    padding: 10px;
+    
+  
+  }
+  
+  .pagination-container {
+      background-color: black;
+      padding: 5rem;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+  }
+  
+  .icon-large {
+    font-size: 4rem;
+    color: white;
+  }
+  
+  /* Estilo base del icono */
+  .icon-large {
+    font-size: 4rem;
+    transition: transform 0.2s ease, color 0.2s ease; /* Transiciones suaves para transformación y color */
+  }
+  
+  /* Estilo del icono cuando se hace clic */
+  .icon-large:active {
+    transform: scale(1.1); /* Escala ligeramente el icono al hacer clic */
+    color: #FF6BDE; /* Cambia el color del icono al hacer clic */
+  }
+  
+  
+}
+
+
+
 
 
 
