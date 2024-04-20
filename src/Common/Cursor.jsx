@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+/* import  { useState, useEffect } from "react";
 import "./Cursor.css"; // Estilos CSS para el cursor
 
 const Cursor = () => {
@@ -42,6 +42,6 @@ const Cursor = () => {
   );
 };
 
-export default Cursor;
+export default Cursor; */
 
 
