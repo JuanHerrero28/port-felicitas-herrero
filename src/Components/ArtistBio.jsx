@@ -1,7 +1,11 @@
 import { Grid, Button } from "@mui/material";
 import "./ArtistBio.css"; // Importa el archivo de estilos CSS
+import { Link } from "react-router-dom";
+
+
 
 const ArtistBio = () => {
+
   return (
     <Grid container>
       <Grid item xs={12} md={12}>
@@ -14,7 +18,9 @@ const ArtistBio = () => {
       <Grid item xs={12}>
         <div className="cont-art-bio">
           <Button variant="contained" className="bioButton">
-            Leer más
+          <Link to={"/about"}>
+              Leer más
+            </Link>
           </Button>
         </div>
       </Grid>

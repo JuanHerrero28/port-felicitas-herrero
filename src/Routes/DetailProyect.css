@@ -90,6 +90,10 @@
   grid-column: 6 / span 7;
 }
 
+.grid-item.image3 img {
+  width: 100%;
+}
+
 .grid-item.title5 {
   grid-column: 8 / span 5;
   margin-top: 8rem;
@@ -115,6 +119,10 @@
   grid-row: span 2;
   grid-column: 1 / span 7;
   margin-top: 8rem;
+}
+
+.grid-item.image4 img {
+  width: 100%;
 }
 
 .grid-item.title6 {
@@ -145,6 +153,10 @@
   margin-top: 8rem;
 }
 
+.grid-item.image5 img {
+  width: 100%;
+}
+
 .grid-item.title7 {
   grid-column: 8 / span 5;
   margin-top: 8rem;
@@ -163,6 +175,10 @@
   grid-row: span 2;
   grid-column: 1 / span 7;
   margin-top: 8rem;
+}
+
+.grid-item.image7 img {
+  width: 100%;
 }
 
 .grid-item.paragraph7 {

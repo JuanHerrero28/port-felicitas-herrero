@@ -7,6 +7,7 @@ import Home from "./Routes/Home";
 /* import Favs from "./Routes/Favs"; */
 import { ContextProvider } from "./Utils/global.context";
 import DetailProyect from "./Routes/DetailProyect";
+/* import DetailAbout from "./Routes/DetailAbout"; */
 /* import Cursor from "./Common/Cursor"; */
 
 
@@ -28,6 +29,8 @@ function App() {
             <Route path="/" element={<Home />} />
             {/* <Route path="/contacto" element={<Contact />} /> */}
             <Route path="/detalle/:id" element={<DetailProyect/>} />
+            {/* <Route path="/about" element={<DetailAbout />} /> */}
+
             {/* <Route path="/favs" element={<Favs />} /> */}
           </Route>
         </Routes>
