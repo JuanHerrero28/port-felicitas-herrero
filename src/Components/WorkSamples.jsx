@@ -47,7 +47,7 @@ const WorkSamples = () => {
   };
 
   return (
-    <div
+    <div id="work-samples-section"
       className={
         state.theme
           ? "work-samples light-background"

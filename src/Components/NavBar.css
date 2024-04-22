@@ -44,3 +44,11 @@
 
 }
 
+.link-nav.disabled {
+  pointer-events: none;
+  opacity: 0.1; /* Cambia la opacidad para indicar que el enlace está deshabilitado */
+  text-decoration: line-through;
+  text-decoration-style: solid; /* Establece el estilo de la línea como sólido */
+  text-decoration-thickness: 1px; /* Grosor de la línea (puedes ajustar el valor según lo fino que quieras que sea) */
+}
+

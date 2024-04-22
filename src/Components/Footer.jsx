@@ -7,7 +7,7 @@ const Footer = () => {
     <div className="footer-container">
       <div className="paragraphs-1">
         <p className="parrafo-1">
-        Me encantaría que trabajemos juntos!
+        ¡Me encantaría que trabajemos juntos!
         </p>
       </div>
       <div className="paragraphs">

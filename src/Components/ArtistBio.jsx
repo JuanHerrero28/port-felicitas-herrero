@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 const ArtistBio = () => {
 
   return (
-    <Grid container>
+    <Grid  container>
       <Grid item xs={12} md={12}>
-        <div className="bioText">
+        <div id="artist-bio-section" className="bioText">
           <p className="parrafo-artist-bio">
             Con más de tres años de experiencia como diseñadora gráfica independiente, quiero expandir mis conocimientos hacia el mundo del diseño web.
           </p>
@@ -17,11 +17,11 @@ const ArtistBio = () => {
       </Grid>
       <Grid item xs={12}>
         <div className="cont-art-bio">
+          <Link to="/about">
           <Button variant="contained" className="bioButton">
-          <Link to={"/about"}>
               Leer más
-            </Link>
           </Button>
+            </Link>
         </div>
       </Grid>
     </Grid>

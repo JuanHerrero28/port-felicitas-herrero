@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   Switch,
@@ -15,9 +15,24 @@ const NavBar = () => {
   const { state, dispatch } = useContextGlobal();
   const [checked, setChecked] = useState(state.theme);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm")); // Verifica si es una pantalla de tamaño móvil
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const location = useLocation(); // Obtener la ubicación actual
   const [scrollY, setScrollY] = useState(0);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const scrollToWorkSamples = () => {
+    const workSamplesSection = document.getElementById('work-samples-section');
+    if (workSamplesSection) {
+      workSamplesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToBioSamples = () => {
+    const artistBioSection = document.getElementById('artist-bio-section');
+    if (artistBioSection) {
+      artistBioSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,6 +59,9 @@ const NavBar = () => {
     setChecked(newTheme);
     dispatch({ type: "CHANGE_MODE" });
   };
+
+  // Condición para deshabilitar los enlaces en las páginas DetailProyect y DetailAbout
+  const isDetailPage = location.pathname.includes("/detalle/");
 
   return (
     <>
@@ -76,7 +94,10 @@ const NavBar = () => {
           <Grid item>
             <Grid container direction="row" alignItems="center">
               <Grid item>
-                <Link className="link-nav" to="/contacto">
+                <Link
+                  className={`link-nav ${isDetailPage ? "disabled" : ""}`}
+                  onClick={scrollToWorkSamples}
+                >
                   <Typography
                     variant="subtitle1"
                     sx={{
@@ -89,7 +110,10 @@ const NavBar = () => {
                 </Link>
               </Grid>
               <Grid item>
-                <Link className="link-nav" to="/favs">
+                <Link
+                  className={`link-nav ${isDetailPage ? "disabled" : ""}`}
+                  onClick={scrollToBioSamples}
+                >
                   <Typography
                     variant="subtitle1"
                     sx={{
@@ -108,10 +132,10 @@ const NavBar = () => {
                   onChange={toggleTheme}
                   sx={{
                     "& .MuiSwitch-thumb": {
-                      backgroundColor: "#FF6BDE", // Color del switch en estado activo
+                      backgroundColor: "#FF6BDE",
                     },
                     "& .MuiSwitch-track": {
-                      backgroundColor: "#FF6BDE", // Color del switch en estado inactivo
+                      backgroundColor: "#FF6BDE",
                     },
                   }}
                 />
@@ -126,6 +150,7 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
 
 
 
