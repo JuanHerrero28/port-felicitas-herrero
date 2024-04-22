@@ -38,14 +38,14 @@
 
   @media only screen and (max-width: 600px) {
     .parrafo-artist-bio{
-      font-size: 24px;
+      font-size: 20px;
       padding: 1rem 1rem 2rem;
       text-align: center;
     }
 
     .cont-art-bio .bioButton {
       padding: 18px;
-      width: 60%;
+      width: 80%;
       font-size: 20px;
     }
 

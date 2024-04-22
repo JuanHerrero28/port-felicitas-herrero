@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import Loading from "../Common/Loading";
 import BtnTop from "../Common/BtnTop";
 
+
+
 const projectData = [
   {
     id: 1,
@@ -155,19 +157,19 @@ const DetailProyect = () => {
     // Simula una carga de datos
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
+    }, 1000);
 
     if (nextProjectClicked) {
       setIsLoading(true);
-      setNextProjectClicked(false); // Restablece el estado de nextProjectClicked
-    } // Simula un tiempo de carga de 3 segundos
+      setNextProjectClicked(false); 
+    } 
 
     return () => clearTimeout(timer);
   }, [project, nextProjectClicked]);
 
   const handleNextProjectClick = () => {
     setIsLoading(true);
-    window.scrollTo(0, 0); // Al hacer clic, establece isLoading en true para mostrar el componente Loading
+    window.scrollTo(0, 0); 
   };
 
   return (
