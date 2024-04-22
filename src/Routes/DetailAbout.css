@@ -101,3 +101,97 @@
     text-align: center;
     padding: 4rem;
   }
+
+  /* Dentro de tu bloque @media para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+
+   
+  .title-about {
+    padding: 2rem;
+    grid-column: 1 / span 5;
+
+  }
+
+  .title-ab-1{
+    font-size: 20px;
+  }
+  
+  .paragraph-1 {
+    font-size: 10px;
+    padding: 2rem;
+    grid-column: 1 /  span 8;
+  }
+
+  .paragraph-2 {
+    font-family: "CamptonBook";
+    font-size: 10px;
+    padding: 2rem;
+    grid-column: 1 /  span 12;
+  }
+  
+  .subtitle { 
+    text-align: center;
+    padding: 2rem;
+    margin-top: 15rem;
+    grid-column: 7 / span 7;
+  }
+
+  .subtitle-about {
+    font-size: 20px;
+  }
+  
+  .numbered-list {
+    grid-column: span 4;
+    font-size: 10px;
+    padding: 1rem;
+    list-style: none;
+    margin-top: 1rem;
+  }
+  
+
+  .ctn-img1{
+    padding: 3rem;
+    grid-column: 1 / span 12;
+    text-align: center;
+  }
+
+
+  .ctn-img2 {
+    grid-column: 1 / span 12;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+
+  .aboutButton {
+    font-size: 20px;
+    width: 90%;
+    height: 100%;
+    padding: 1rem;
+    background-color: #0051ff;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .aboutButton:hover {
+    background-color: #0036b3; /* Color de fondo al pasar el cursor */
+}
+
+  .ctn-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 5rem;
+    align-items: center;
+    grid-column: 1 / span 12;
+    text-align: left;
+  }
+
+  .ctn-final {
+    font-size: 20px;
+    
+  }
+}
