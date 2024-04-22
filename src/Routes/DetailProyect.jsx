@@ -155,7 +155,7 @@ const DetailProyect = () => {
     // Simula una carga de datos
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 5000);
 
     if (nextProjectClicked) {
       setIsLoading(true);
