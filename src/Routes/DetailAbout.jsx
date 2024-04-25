@@ -2,6 +2,7 @@ import BtnTop from "../Common/BtnTop";
 import { useState, useEffect } from "react";
 import Loading from "../Common/Loading";
 import "./DetailAbout.css";
+import Cursor from "../Common/Cursor";
 
 /* const aboutData = [
   {
@@ -101,10 +102,11 @@ const DetailAbout = () => {
           <div className="ctn-final">
             <p>
               ¡Gracias por visitar mi espacio creativo! Espero que disfrutes
-              explorando mi trabajo tanto como yo disfruté creándolo.
+              explorando mi trabajo tanto como yo disfruté creándolo!.
             </p>
           </div>
           <BtnTop />
+          <Cursor/>
         </div>
       )}
     </>

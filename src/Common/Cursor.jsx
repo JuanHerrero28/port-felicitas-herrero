@@ -1,4 +1,4 @@
-/* import  { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import "./Cursor.css"; // Estilos CSS para el cursor
 
 const Cursor = () => {
@@ -7,7 +7,11 @@ const Cursor = () => {
 
   useEffect(() => {
     const moveCursor = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      // Aplica un suavizado al movimiento del cursor
+      setPosition(prevPosition => ({
+        x: prevPosition.x + (e.clientX - prevPosition.x) / 8,
+        y: prevPosition.y + (e.clientY - prevPosition.y) / 8
+      }));
     };
 
     const hoverElement = () => {
@@ -33,6 +37,7 @@ const Cursor = () => {
     };
   }, []);
 
+  // Aplica clases condicionales para cambiar el tamaño del cursor en estado de hover
   const cursorClasses = `cursor ${hovered ? "hovered" : ""}`;
 
   return (
@@ -42,6 +47,7 @@ const Cursor = () => {
   );
 };
 
-export default Cursor; */
+export default Cursor;
+
 
 

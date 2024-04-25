@@ -6,6 +6,7 @@ import Testimonials from "../Components/Testimonials";
 import WorkSamples from "../Components/WorkSamples";
 import { useState, useEffect } from "react";
 import Loading from "../Common/Loading";
+import Cursor from "../Common/Cursor";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -29,6 +30,7 @@ const Home = () => {
           <Process />
           <Testimonials />
           <BtnTop />
+          <Cursor/>
         </div>
       )}
     </>

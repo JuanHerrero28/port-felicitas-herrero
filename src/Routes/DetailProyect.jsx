@@ -3,6 +3,7 @@ import "./DetailProyect.css";
 import { useState, useEffect } from "react";
 import Loading from "../Common/Loading";
 import BtnTop from "../Common/BtnTop";
+import Cursor from "../Common/Cursor";
 
 
 
@@ -253,6 +254,7 @@ const DetailProyect = () => {
         </>
       )}
       <BtnTop/>
+      <Cursor/>
     </div>
   );
 };
