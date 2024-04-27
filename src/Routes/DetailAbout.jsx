@@ -4,6 +4,7 @@ import Loading from "../Common/Loading";
 import "./DetailAbout.css";
 import Cursor from "../Common/Cursor";
 import { useContextGlobal } from "../Utils/global.context";
+import CVFELIHERRERO from '/images/CV-FELI-HERRERO.pdf';
 
 /* const aboutData = [
   {
@@ -98,7 +99,8 @@ const DetailAbout = () => {
             <img className="image1" src="/images/star-4.png" alt="imagen1" />
           </div>
           <div className="ctn-btn">
-            <button className="aboutButton">descargar cv</button>
+            <button className="aboutButton"> <a className="aboutButton" href={CVFELIHERRERO} download target="_blank">descargar cv</a></button>
+
           </div>
           <div className="ctn-img2">
             <img className="image-2" src="/images/feli.png" alt="imagen2" />

@@ -69,6 +69,7 @@
   .aboutButton {
     font-family: "NeueKaineBold";
     font-size: 20px;
+    text-decoration: none;
     width: 30%;
     height: 15%;
     background-color: #0051ff;
