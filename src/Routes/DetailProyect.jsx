@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Loading from "../Common/Loading";
 import BtnTop from "../Common/BtnTop";
 import Cursor from "../Common/Cursor";
+import { useContextGlobal } from "../Utils/global.context";
 
 
 
@@ -110,7 +111,7 @@ const projectData = [
       "Después de haber desarrollado la propuesta estratégica integral, es crucial seleccionar las tipologías adecuadas que se alineen con nuestros objetivos y enfoques estratégicos. En esta etapa, analizaremos detenidamente las opciones disponibles y evaluaremos cómo cada tipología contribuirá a la implementación exitosa de nuestro sistema gráfico/audiovisual basado en las metodologías del diseño UX/UI. Después de evaluar las características y beneficios de cada tipología, seleccionaremos aquellas que mejor se alineen con nuestros objetivos estratégicos y nos ayuden a cumplir con las necesidades identificadas durante la investigación y el proceso de innovación. Esta selección nos proporcionará una base sólida para la implementación efectiva de nuestro sistema gráfico en ARBA, asegurando una experiencia de usuario óptima y resultados exitosos.",
     ],
     numberedList: ["Agencia de recaudación de la provincia de Buenos Aires (ARBA). Cátedra Rico, Diseño Gráfico, FADU-UBA", "Diseño de servicio", "Fecha de inicio: 12/09/2023", "Fecha de entrega: 12/12/2023"],
-    finalProjectUrl: "URL_DEL_PROYECTO_EN_BEHANCE_1"
+    finalProjectUrl: "https://www.behance.net/gallery/197259505/DISENO-DE-SERVICIOS"
   },
   {
     id: 4,
@@ -148,11 +149,18 @@ const projectData = [
 ];
 
 const DetailProyect = () => {
+  const { state } = useContextGlobal();
   const { id } = useParams();
   const project = projectData.find((project) => project.id === parseInt(id));
 
   const [isLoading, setIsLoading] = useState(true);
   const [nextProjectClicked, setNextProjectClicked] = useState(false);
+
+  const themeStyle = state.theme ? { backgroundColor: "white", color: "black" } : { backgroundColor: "black", color: "white" };
+
+  const imageStyle = state.theme
+  ? { filter: "grayscale(100%) brightness(120%)" } // Aplica un filtro de escala de grises y reduce el brillo
+  : { filter: "none" };
 
   useEffect(() => {
     // Simula una carga de datos
@@ -220,32 +228,21 @@ const DetailProyect = () => {
   
 
   return (
-    <div className="project-detail">
+    <div className="project-detail" style={themeStyle}>
       {isLoading ? (
         <Loading />
       ) : (
         <>
           <div className="grid-container-detail">
             <div className="grid-item image1 image-animate">
-              <img src={project.images[0].src} alt={project.images[0].alt} />
+              <img style={imageStyle} src={project.images[0].src} alt={project.images[0].alt} />
             </div>
-            <div className="grid-item title1 animate">
+            <div className="grid-item title1 animate" style={themeStyle}>
             {project.titles[0]}
             </div>
-            <div className="grid-item title2 animate">
-              {/* Map sobre cada letra del título */}
-              {project.titles[1].split("").map((letter, index) => (
-                <span
-                  key={index}
-                  className="animate"
-                  style={{ "--index": index }}
-                >
-                  {letter}
-                </span>
-              ))}
-            </div>
-            <div className="grid-item paragraph1 animate">{project.paragraphs[0]}</div>
-            <div className="grid-item list animate">
+            <div className="grid-item title2 animate" style={themeStyle}>{project.titles[1]}</div>
+            <div className="grid-item paragraph1 animate" style={themeStyle}>{project.paragraphs[0]}</div>
+            <div className="grid-item list animate" style={themeStyle}>
               <ol>
                 {project.numberedList.map((item, index) => (
                   <li key={index}>{item}</li>
@@ -255,11 +252,11 @@ const DetailProyect = () => {
             <div className="grid-item image2 image-animate">
               <img src={project.images[1].src} alt={project.images[1].alt} />
             </div>
-            <div className="grid-item title3 animate">{project.titles[2]}
+            <div className="grid-item title3 animate" style={themeStyle}>{project.titles[2]}
             </div>
             <div className="grid-item title4 animate">
-              <h2 className="title-4">{project.titles[3]}</h2>
-              <p className="grid-item paragraph2 animate">{project.paragraphs[1]}</p>
+              <h2 className="title-4" style={themeStyle}>{project.titles[3]}</h2>
+              <p className="grid-item paragraph2 animate" style={themeStyle}>{project.paragraphs[1]}</p>
             </div>
             <div className="grid-item image3 image-animate">
               <img src={project.images[2].src} alt={project.images[2].alt} />
@@ -268,12 +265,12 @@ const DetailProyect = () => {
               <img src={project.images[3].src} alt={project.images[3].alt} />
             </div>
             <div className="grid-item title5 animate">
-              <h2 className="title-5">{project.titles[4]}</h2>
-              <p className="grid-item paragraph3 animate">{project.paragraphs[2]}</p>
+              <h2 className="title-5" style={themeStyle}>{project.titles[4]}</h2>
+              <p className="grid-item paragraph3 animate" style={themeStyle}>{project.paragraphs[2]}</p>
             </div>
             <div className="grid-item title6 animate">
-              <h2 className="title-6">{project.titles[5]}</h2>
-              <p className="grid-item paragraph4 animate">{project.paragraphs[3]}</p>
+              <h2 className="title-6" style={themeStyle}>{project.titles[5]}</h2>
+              <p className="grid-item paragraph4 animate" style={themeStyle}>{project.paragraphs[3]}</p>
             </div>
             <div className="grid-item image5 image-animate">
               <img src={project.images[4].src} alt={project.images[4].alt} />
@@ -282,8 +279,8 @@ const DetailProyect = () => {
               <img src={project.images[6].src} alt={project.images[6].alt} />
             </div>
             <div className="grid-item title7 animate">
-              <h2 className="title-7">{project.titles[6]}</h2>
-              <p className="grid-item paragraph7 animate">{project.paragraphs[6]}</p>
+              <h2 className="title-7" style={themeStyle}>{project.titles[6]}</h2>
+              <p className="grid-item paragraph7 animate" style={themeStyle}>{project.paragraphs[6]}</p>
             </div>
           </div>
           <div className="content-btn">

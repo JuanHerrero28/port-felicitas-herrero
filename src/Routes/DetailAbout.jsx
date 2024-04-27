@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Loading from "../Common/Loading";
 import "./DetailAbout.css";
 import Cursor from "../Common/Cursor";
+import { useContextGlobal } from "../Utils/global.context";
 
 /* const aboutData = [
   {
@@ -25,6 +26,9 @@ import Cursor from "../Common/Cursor";
 
 const DetailAbout = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { state } = useContextGlobal();
+
+  const themeStyle = state.theme ? { backgroundColor: "white", color: "black" } : { backgroundColor: "black", color: "white" };
 
   // Simula la carga de datos o recursos
   useEffect(() => {
@@ -39,7 +43,7 @@ const DetailAbout = () => {
       {isLoading ? (
         <Loading /> // Muestra el componente de carga si isLoading es true
       ) : (
-        <div className="detail-about-grid">
+        <div className="detail-about-grid" style={themeStyle}>
           <div className="title-about">
             <h2 className="title-ab-1">SOBRE MÍ</h2>
           </div>
@@ -47,7 +51,7 @@ const DetailAbout = () => {
             <h2 className="subtitle-about">Experiencia</h2>
           </div>
           <div className="paragraph-1">
-            <p>
+            <p style={themeStyle}>
               ¡Hola! Soy Felicitas Herrero, diseñadora gráfica profesional en
               pleno crecimiento, graduada en la Universidad de Buenos Aires
               (FADU). Mi pasión por el diseño se fusiona con mi amor por la
@@ -62,7 +66,7 @@ const DetailAbout = () => {
               desafían a crecer y evolucionar como profesional.
             </p>
           </div>
-          <ul className="numbered-list">
+          <ul className="numbered-list" style={themeStyle}>
             <li>
               2022 Diseñadora gráfica part time -{" "}
               <strong style={{ fontWeight: "bold" }}>Atomic Kitchens</strong>
@@ -75,7 +79,7 @@ const DetailAbout = () => {
             </li>
           </ul>
           <div className="paragraph-2">
-            <p>
+            <p style={themeStyle}>
               Este portfolio es más que un proyecto práctico; es una
               manifestación de mi dedicación y pasión por el diseño. Me divertí
               mucho haciéndolo y me desafié a mí misma en cada paso del camino,
