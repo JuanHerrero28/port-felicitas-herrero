@@ -26,6 +26,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/detalle/:id" element={<DetailProyect/>} />
             <Route path="/about" element={<DetailAbout />} />
+            <Route path="/detalle/about" element={<DetailAbout />} />
 
           </Route>
         </Routes>

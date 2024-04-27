@@ -229,8 +229,21 @@ const DetailProyect = () => {
             <div className="grid-item image1 image-animate">
               <img src={project.images[0].src} alt={project.images[0].alt} />
             </div>
-            <div className="grid-item title1 animate">{project.titles[0]}</div>
-            <div className="grid-item title2 animate">{project.titles[1]}</div>
+            <div className="grid-item title1 animate">
+            {project.titles[0]}
+            </div>
+            <div className="grid-item title2 animate">
+              {/* Map sobre cada letra del título */}
+              {project.titles[1].split("").map((letter, index) => (
+                <span
+                  key={index}
+                  className="animate"
+                  style={{ "--index": index }}
+                >
+                  {letter}
+                </span>
+              ))}
+            </div>
             <div className="grid-item paragraph1 animate">{project.paragraphs[0]}</div>
             <div className="grid-item list animate">
               <ol>
@@ -242,7 +255,8 @@ const DetailProyect = () => {
             <div className="grid-item image2 image-animate">
               <img src={project.images[1].src} alt={project.images[1].alt} />
             </div>
-            <div className="grid-item title3 animate">{project.titles[2]}</div>
+            <div className="grid-item title3 animate">{project.titles[2]}
+            </div>
             <div className="grid-item title4 animate">
               <h2 className="title-4">{project.titles[3]}</h2>
               <p className="grid-item paragraph2 animate">{project.paragraphs[1]}</p>

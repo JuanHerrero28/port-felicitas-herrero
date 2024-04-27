@@ -95,7 +95,7 @@ const NavBar = () => {
             <Grid container direction="row" alignItems="center">
               <Grid item>
                 <Link
-                  className={`link-nav ${isDetailPage ? "disabled" : ""}`}
+                  className="link-nav" to="/"
                   onClick={scrollToWorkSamples}
                 >
                   <Typography
@@ -111,8 +111,9 @@ const NavBar = () => {
               </Grid>
               <Grid item>
                 <Link
-                  className={`link-nav ${isDetailPage ? "disabled" : ""}`}
+                  className="link-nav"
                   onClick={scrollToBioSamples}
+                  to={isDetailPage ? `/detalle/about` : "/"}
                 >
                   <Typography
                     variant="subtitle1"
