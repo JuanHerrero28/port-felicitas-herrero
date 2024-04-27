@@ -12,6 +12,8 @@
   src: url("../Assets/Fonts/CamptonLight.ttf") format("truetype");
 }
 
+
+
 .title-hero-section {
   font-family: "NeueKaine-Bold";
   font-size: 140px;
@@ -22,9 +24,9 @@
   font-family: "CamptonBook";
   font-size: 24px;
   padding: 3rem;
-  background-color: black;
-  color: #ffffff;
 }
+
+
 
 .cont-vacio {
   background-color: black;

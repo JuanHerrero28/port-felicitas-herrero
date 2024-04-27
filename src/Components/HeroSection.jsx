@@ -2,9 +2,22 @@ import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import { useState, useEffect   } from "react";
 import "./HeroSection.css";
+import { useContextGlobal } from "../Utils/global.context";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { state } = useContextGlobal();
+
+  const themeStyle = state.theme ? { backgroundColor: "white", color: "black" } : { backgroundColor: "black", color: "white" };
+
+  const imageStyle = state.theme
+    ? { filter: "grayscale(100%) brightness(120%)" } // Aplica un filtro de escala de grises y reduce el brillo
+    : { filter: "none" };
+    
+    const imageStyle2 = state.theme
+    ? { filter: "grayscale(10%) brightness(10%)" } // Aplica un filtro de escala de grises y reduce el brillo
+    : { filter: "none" };
+
 
   const heroData = {
     title: "Graphic designer",
@@ -34,6 +47,8 @@ const HeroSection = () => {
     };
   }, []);
 
+ 
+
   // Define las variantes de animación
   const titleVariants = {
     hidden: { opacity: 0, y: 20 }, // Estado inicial
@@ -49,11 +64,11 @@ const HeroSection = () => {
   return (
     <Grid container>
       {/* Primera fila: Imagen */}
-      <Grid item xs={12}>
+      <Grid item xs={12} >
         <img
           src={`images/${heroData.images[1]}`}
           alt="Imagen 1"
-          style={{ width: "100%", height: "100%" }}
+          style={{ width: "100%", height: "100%", ...imageStyle }}
         />
       </Grid>
       {/* Segunda fila: Título e Imágenes */}
@@ -69,7 +84,7 @@ const HeroSection = () => {
               justifyContent: "center",
               alignItems: "center",
               padding: "20px",
-              backgroundColor: "black",
+              ...themeStyle,
             }}
           >
             {/* Usa motion.div para animar el título */}
@@ -82,7 +97,7 @@ const HeroSection = () => {
             >
               {/* Mapea cada letra del título y aplica las variantes de animación */}
               {heroData.title.split("").map((letter, index) => (
-                <motion.span key={index} variants={letterVariants} style={{ fontFamily: "NeueKaine-Bold" }}>
+                <motion.span key={index} variants={letterVariants} style={{ fontFamily: "NeueKaine-Bold", ...themeStyle}}>
                   {letter}
                 </motion.span>
               ))}
@@ -99,13 +114,13 @@ const HeroSection = () => {
               justifyContent: "center",
               alignItems: "center",
               padding: "20px",
-              backgroundColor: "black",
+              ...themeStyle,
             }}
           >
             <img
               src={`images/${heroData.images[0]}`}
               alt="Imagen 3"
-              style={{ width: "250px", height: "250px" }}
+              style={{ width: "250px", height: "250px", ...imageStyle2 }}
             />
           </Grid>
         </Grid>
@@ -113,13 +128,13 @@ const HeroSection = () => {
       {/* Tercera fila: Párrafo */}
       <Grid
         style={{
-          backgroundColor: "black",
+          ...themeStyle,
         }}
         item
         xs={12}
         md={6}
       ></Grid>
-      <Grid item md={6} xs={12}>
+      <Grid item md={6} xs={12} style={themeStyle}>
         <p className="paragraph-hero">{heroData.paragraph}</p>
       </Grid>
       {/* Marquesina */}
