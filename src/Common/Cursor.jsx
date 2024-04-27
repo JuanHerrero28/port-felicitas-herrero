@@ -9,8 +9,8 @@ const Cursor = () => {
     const moveCursor = (e) => {
       // Aplica un suavizado al movimiento del cursor
       setPosition(prevPosition => ({
-        x: prevPosition.x + (e.clientX - prevPosition.x) / 8,
-        y: prevPosition.y + (e.clientY - prevPosition.y) / 8
+        x: prevPosition.x + (e.clientX - prevPosition.x) / 2,
+        y: prevPosition.y + (e.clientY - prevPosition.y) / 2
       }));
     };
 
@@ -23,7 +23,7 @@ const Cursor = () => {
     };
 
     window.addEventListener("mousemove", moveCursor);
-    document.querySelectorAll("button, a, .link").forEach((el) => {
+    document.querySelectorAll("button, a").forEach((el) => {
       el.addEventListener("mouseenter", hoverElement);
       el.addEventListener("mouseleave", unhoverElement);
     });

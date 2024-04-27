@@ -10,8 +10,8 @@
 }
 
 .cursor.hovered {
-  width: 60px; /* Tamaño del cursor en estado de hover */
-  height: 60px; /* Tamaño del cursor en estado de hover */
+  width: 90px; /* Tamaño del cursor en estado de hover */
+  height: 90px; /* Tamaño del cursor en estado de hover */
 }
 
 .view-text {
