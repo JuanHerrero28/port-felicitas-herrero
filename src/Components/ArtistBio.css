@@ -15,12 +15,8 @@
     text-transform: uppercase;
     font-size: 40px;
     width: 100%;
-    color: #ffffff;
 }
 
-.bioText {
-      background-color: #000000;
-  }
   .cont-art-bio .bioButton {
     font-family: "NeueKaineLight";
     padding: 18px;
@@ -32,7 +28,6 @@
 
 
   .cont-art-bio {
-    background-color: #000000;
     padding: 2rem 6rem 6rem;
   }
 

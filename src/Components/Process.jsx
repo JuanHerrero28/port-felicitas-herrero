@@ -1,7 +1,17 @@
 
 import './Process.css';
+import { useContextGlobal } from "../Utils/global.context";
 
 const Process = () => {
+  const { state } = useContextGlobal();
+
+  const themeStyle = state.theme ? { backgroundColor: "white", color: "black" } : { backgroundColor: "black", color: "white" };
+
+  const themeStyle2 = state.theme ? { backgroundColor: "white", color: "black" } : { backgroundColor: "#ff6bde", color: "white" };
+
+  const imageStyle = state.theme
+    ? { filter: "grayscale(100%) brightness(120%)" } // Aplica un filtro de escala de grises y reduce el brillo
+    : { filter: "none" };
   // Datos para las tarjetas
   const cardData = [
     {
@@ -38,10 +48,10 @@ const Process = () => {
   ];
 
   return (
-    <div className="root">
-      <img src="./images/img6.png" alt="Imagen Principal" style={{ width: '100%' }} />
-      <h4 className="title">MI PROCESO</h4>
-      <div className="cardContainer">
+    <div className="root" style={themeStyle}>
+      <img src="./images/img6.png" alt="Imagen Principal" style={{ width: '100%', ...imageStyle }} />
+      <h4 className="title" style={themeStyle}>MI PROCESO</h4>
+      <div className="cardContainer" style={themeStyle2}>
         {cardData.map((item, index) => (
           <div key={index} className="card">
             <div className="cardContent">
