@@ -30,7 +30,7 @@ const Cursor = () => {
 
     return () => {
       window.removeEventListener("mousemove", moveCursor);
-      document.querySelectorAll("button, a").forEach((el) => {
+      document.querySelectorAll("button").forEach((el) => {
         el.removeEventListener("mouseenter", hoverElement);
         el.removeEventListener("mouseleave", unhoverElement);
       });
