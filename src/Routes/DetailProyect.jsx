@@ -190,10 +190,34 @@ const DetailProyect = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Función para manejar la animación de los elementos al hacer scroll
+    const handleScrollAnimation = () => {
+      const elements = document.querySelectorAll('.grid-item.animate');
+      elements.forEach((element) => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+        if (elementPosition < screenHeight * 0.75) {
+          element.classList.add('active');
+        }
+      });
+    };
+
+    // Agregar el listener de scroll
+    window.addEventListener('scroll', handleScrollAnimation);
+
+    // Eliminar el listener al desmontar el componente
+    return () => {
+      window.removeEventListener('scroll', handleScrollAnimation);
+    };
+  }, []);
+  
   const handleNextProjectClick = () => {
     setIsLoading(true);
     window.scrollTo(0, 0); 
   };
+
+  
 
   return (
     <div className="project-detail">
@@ -205,10 +229,10 @@ const DetailProyect = () => {
             <div className="grid-item image1 image-animate">
               <img src={project.images[0].src} alt={project.images[0].alt} />
             </div>
-            <div className="grid-item title1">{project.titles[0]}</div>
-            <div className="grid-item title2">{project.titles[1]}</div>
-            <div className="grid-item paragraph1">{project.paragraphs[0]}</div>
-            <div className="grid-item list">
+            <div className="grid-item title1 animate">{project.titles[0]}</div>
+            <div className="grid-item title2 animate">{project.titles[1]}</div>
+            <div className="grid-item paragraph1 animate">{project.paragraphs[0]}</div>
+            <div className="grid-item list animate">
               <ol>
                 {project.numberedList.map((item, index) => (
                   <li key={index}>{item}</li>
@@ -218,24 +242,24 @@ const DetailProyect = () => {
             <div className="grid-item image2 image-animate">
               <img src={project.images[1].src} alt={project.images[1].alt} />
             </div>
-            <div className="grid-item title3">{project.titles[2]}</div>
-            <div className="grid-item title4">
+            <div className="grid-item title3 animate">{project.titles[2]}</div>
+            <div className="grid-item title4 animate">
               <h2 className="title-4">{project.titles[3]}</h2>
-              <p className="grid-item paragraph2">{project.paragraphs[1]}</p>
+              <p className="grid-item paragraph2 animate">{project.paragraphs[1]}</p>
             </div>
             <div className="grid-item image3 image-animate">
               <img src={project.images[2].src} alt={project.images[2].alt} />
             </div>
-            <div className="grid-item image4 image-animate">
+            <div className="grid-item image4 image-animate animate">
               <img src={project.images[3].src} alt={project.images[3].alt} />
             </div>
-            <div className="grid-item title5">
+            <div className="grid-item title5 animate">
               <h2 className="title-5">{project.titles[4]}</h2>
-              <p className="grid-item paragraph3">{project.paragraphs[2]}</p>
+              <p className="grid-item paragraph3 animate">{project.paragraphs[2]}</p>
             </div>
-            <div className="grid-item title6">
+            <div className="grid-item title6 animate">
               <h2 className="title-6">{project.titles[5]}</h2>
-              <p className="grid-item paragraph4">{project.paragraphs[3]}</p>
+              <p className="grid-item paragraph4 animate">{project.paragraphs[3]}</p>
             </div>
             <div className="grid-item image5 image-animate">
               <img src={project.images[4].src} alt={project.images[4].alt} />
@@ -243,9 +267,9 @@ const DetailProyect = () => {
             <div className="grid-item image7 image-animate">
               <img src={project.images[6].src} alt={project.images[6].alt} />
             </div>
-            <div className="grid-item title7">
+            <div className="grid-item title7 animate">
               <h2 className="title-7">{project.titles[6]}</h2>
-              <p className="grid-item paragraph7">{project.paragraphs[6]}</p>
+              <p className="grid-item paragraph7 animate">{project.paragraphs[6]}</p>
             </div>
           </div>
           <div className="content-btn">

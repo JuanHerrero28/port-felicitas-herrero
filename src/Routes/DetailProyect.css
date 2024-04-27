@@ -255,6 +255,19 @@
   transform: translateY(0); /* Mueve las imágenes hacia arriba 0px */
 }
 
+/* Animación de entrada para elementos */
+.grid-item.animate {
+  opacity: 0; /* Inicialmente, establece la opacidad en 0 para ocultar los elementos */
+  transform: translateY(50px); /* Mueve los elementos hacia abajo 50px */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Transiciones suaves para la opacidad y la transformación */
+}
+
+/* Aplica la animación cuando los elementos estén visibles */
+.grid-item.animate.active {
+  opacity: 1; /* Hace que los elementos sean visibles */
+  transform: translateY(0); /* Mueve los elementos hacia arriba 0px */
+}
+
 
 /* Dentro de tu bloque @media para dispositivos móviles */
 @media only screen and (max-width: 600px) {
