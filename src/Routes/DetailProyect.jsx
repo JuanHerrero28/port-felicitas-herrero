@@ -168,6 +168,28 @@ const DetailProyect = () => {
     return () => clearTimeout(timer);
   }, [project, nextProjectClicked]);
 
+  useEffect(() => {
+    // Función para manejar la animación de las imágenes al hacer scroll
+    const handleScrollAnimation = () => {
+      const images = document.querySelectorAll('.grid-item.image-animate img');
+      images.forEach((image) => {
+        const imagePosition = image.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+        if (imagePosition < screenHeight * 0.75) {
+          image.classList.add('active');
+        }
+      });
+    };
+
+    // Agregar el listener de scroll
+    window.addEventListener('scroll', handleScrollAnimation);
+
+    // Eliminar el listener al desmontar el componente
+    return () => {
+      window.removeEventListener('scroll', handleScrollAnimation);
+    };
+  }, []);
+
   const handleNextProjectClick = () => {
     setIsLoading(true);
     window.scrollTo(0, 0); 
@@ -180,7 +202,7 @@ const DetailProyect = () => {
       ) : (
         <>
           <div className="grid-container-detail">
-            <div className="grid-item image1">
+            <div className="grid-item image1 image-animate">
               <img src={project.images[0].src} alt={project.images[0].alt} />
             </div>
             <div className="grid-item title1">{project.titles[0]}</div>
@@ -193,7 +215,7 @@ const DetailProyect = () => {
                 ))}
               </ol>
             </div>
-            <div className="grid-item image2">
+            <div className="grid-item image2 image-animate">
               <img src={project.images[1].src} alt={project.images[1].alt} />
             </div>
             <div className="grid-item title3">{project.titles[2]}</div>
@@ -201,10 +223,10 @@ const DetailProyect = () => {
               <h2 className="title-4">{project.titles[3]}</h2>
               <p className="grid-item paragraph2">{project.paragraphs[1]}</p>
             </div>
-            <div className="grid-item image3">
+            <div className="grid-item image3 image-animate">
               <img src={project.images[2].src} alt={project.images[2].alt} />
             </div>
-            <div className="grid-item image4">
+            <div className="grid-item image4 image-animate">
               <img src={project.images[3].src} alt={project.images[3].alt} />
             </div>
             <div className="grid-item title5">
@@ -215,10 +237,10 @@ const DetailProyect = () => {
               <h2 className="title-6">{project.titles[5]}</h2>
               <p className="grid-item paragraph4">{project.paragraphs[3]}</p>
             </div>
-            <div className="grid-item image5">
+            <div className="grid-item image5 image-animate">
               <img src={project.images[4].src} alt={project.images[4].alt} />
             </div>
-            <div className="grid-item image7">
+            <div className="grid-item image7 image-animate">
               <img src={project.images[6].src} alt={project.images[6].alt} />
             </div>
             <div className="grid-item title7">
