@@ -4,7 +4,7 @@ import Loading from "../Common/Loading";
 import "./DetailAbout.css";
 import Cursor from "../Common/Cursor";
 import { useContextGlobal } from "../Utils/global.context";
-import CVFELIHERRERO from '/images/CV-FH.pdf';
+import CVFELIHERRERO from "../Assets/Fonts/CV-FH.pdf"
 
 /* const aboutData = [
   {
