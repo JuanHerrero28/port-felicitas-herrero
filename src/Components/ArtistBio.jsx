@@ -18,9 +18,7 @@ const ArtistBio = () => {
       <Grid item xs={12} md={12}>
         <div id="artist-bio-section" className="bioText">
           <p className="parrafo-artist-bio" style={{...themeStyle}}>
-            Con más de tres años de experiencia como diseñadora gráfica
-            independiente, quiero expandir mis conocimientos hacia el mundo del
-            diseño web.
+          Diseñadora gráfica con experiencia en proyectos freelance y corporativos, especializada en crear identidades visuales modernas y efectivas. Combino creatividad, funcionalidad y tendencias actuales para desarrollar diseños que conectan con audiencias y refuerzan marcas.
           </p>
         </div>
       </Grid>

@@ -69,11 +69,11 @@ const DetailAbout = () => {
           </div>
           <ul className="numbered-list" style={themeStyle}>
             <li>
-              2022 Diseñadora gráfica part time -{" "}
+            Agosto 2022 - Diciembre 2024 Diseñadora gráfica -{" "}
               <strong style={{ fontWeight: "bold" }}>Atomic Kitchens</strong>
             </li>
             <li>
-              2022 - 2024 Diseñadora gráfica independiente, clientes:{" "}
+              Diciembre 2024 - Actualidad Diseñadora gráfica independiente, clientes:{" "}
               <strong style={{ fontWeight: "bold" }}>
                 Dj y productores musicales
               </strong>
